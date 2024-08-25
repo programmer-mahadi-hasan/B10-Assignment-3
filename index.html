@@ -1,27 +1,121 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home-Design-Landing-Page</title>
+
     <!-- manrope font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
     <!-- daisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- styles -->
     <style>
-        .manrope-font{
+        .manrope-font {
             font-family: "Manrope", sans-serif;
         }
     </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': '#ABEF5F',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+
 <body class="manrope-font">
-    <header>
-        <h1 class="text-2xl font-bold text-purple-600 text-center">Hello World!</h1>
+    <header class="container mx-auto">
+        <!-- navbar starts -->
+        <nav>
+            <div class="navbar">
+                <div class="navbar-start">
+                    <div class="flex items-center gap-x-2">
+                        <a class="p-2 bg-primary-color rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M12.007 2.05932L1.0033 13.0557" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M6.00728 1.18866C6.00728 1.18866 11.6409 0.715645 12.4957 1.57084C13.3503 2.42604 12.8734 8.05944 12.8734 8.05944" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg></a>
+                        <a class="text-2xl font-extrabold">Rinterio</a>
+                    </div>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a class="text-[#494949]">Home</a></li>
+                        <li><a class="text-[#737373]">Services</a></li>
+                        <li><a class="text-[#737373]">Portfolio</a></li>
+                        <li><a class="text-[#737373]">Blogs</a></li>
+                        <li><a class="text-[#737373]">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <div class="space-x-3 hidden lg:flex">
+                        <div class="w-12 h-12 p-3 border-2 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 25 25" fill="none">
+                                <path d="M17.5075 17.5098L22.006 22.0113" stroke="#737373" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M20.0096 11.0104C20.0113 6.03982 15.9832 2.00904 11.0126 2.00739C6.04207 2.00573 2.01129 6.03383 2.00964 11.0044C2.00799 15.975 6.03609 20.0057 11.0066 20.0074C15.9772 20.009 20.008 15.981 20.0096 11.0104Z"
+                                    stroke="#737373" stroke-width="1.5" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="w-12 h-12 p-3 border-2 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 25 25" fill="none">
+                                <path
+                                    d="M8.00795 16.028L15.2711 16.0304C19.7587 16.0319 20.4422 13.2129 21.2713 9.1015C21.5104 7.91561 21.63 7.32267 21.3431 6.92751C21.0561 6.53235 20.5058 6.53216 19.4052 6.5318L6.01111 6.52734"
+                                    stroke="#737373" stroke-width="1.5" stroke-linecap="round" />
+                                <path
+                                    d="M8.00795 16.0282L5.39083 3.54225C5.16855 2.65184 4.36878 2.02698 3.45105 2.02668L2.5126 2.02637"
+                                    stroke="#737373" stroke-width="1.5" stroke-linecap="round" />
+                                <path
+                                    d="M8.88797 16.0283L8.47653 16.0282C7.11318 16.0277 6.00758 17.1786 6.00711 18.5987C6.00703 18.8354 6.19117 19.0274 6.4184 19.0275L17.507 19.0312"
+                                    stroke="#737373" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M10.506 22.0288C11.3344 22.0291 12.0062 21.3577 12.0065 20.5293C12.0067 19.7009 11.3354 19.0291 10.507 19.0288C9.67853 19.0285 9.00673 19.6999 9.00646 20.5283C9.00618 21.3567 9.67753 22.0285 10.506 22.0288Z"
+                                    stroke="#737373" stroke-width="1.5" />
+                                <path
+                                    d="M17.506 22.0313C18.3344 22.0315 19.0062 21.3602 19.0065 20.5318C19.0067 19.7033 18.3354 19.0315 17.507 19.0313C16.6785 19.031 16.0067 19.7023 16.0065 20.5308C16.0062 21.3592 16.6775 22.031 17.506 22.0313Z"
+                                    stroke="#737373" stroke-width="1.5" />
+                            </svg>
+                        </div>
+                        <div class="btn bg-primary-color rounded-3xl">
+                            <a class="text-xl font-extrabold">Book Consult</a>
+                            <a class="rounded-full bg-black p-3"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 14 14" fill="none">
+                                    <path d="M12.0109 2.10278L1.00728 13.0991" stroke="white" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path
+                                        d="M6.01123 1.23212C6.01123 1.23212 11.6449 0.759102 12.4996 1.6143C13.3542 2.4695 12.8773 8.10289 12.8773 8.10289"
+                                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg></a>
+                        </div>
+                    </div>
+                    <div class="dropdown border-2 rounded-full">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main></main>
+    <main>
+    </main>
     <footer></footer>
 </body>
+
 </html>
